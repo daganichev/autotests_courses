@@ -7,6 +7,12 @@
 
 
 def letter_stat(our_str):
+    """
+    Функция создает словарь из всех возможных символов строки, после чего пересчитываем их в цикле
+    и возвращаем словарь{буква: кол-во}
+    :param our_str: получаем входящую строку
+    :return: возвращаем словарь
+    """
     letters_dict = dict.fromkeys([i for i in our_str], 0)
     for i in our_str:
         letters_dict[i] = letters_dict.get(i) + 1

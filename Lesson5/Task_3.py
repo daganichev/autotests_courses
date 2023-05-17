@@ -19,6 +19,11 @@
 
 
 def everything_for_your_cat(cats_data):
+    """
+    Функция формирует словарь{people: cats}, после чего из словаря формируем исходящую строку и возвращает ее
+    :param cats_data: получаем список картежей
+    :return: возвращаем строку
+    """
     our_str = ''
     people_and_cats_dict = {}
     # Цикл для формирования словаря{people: cats}

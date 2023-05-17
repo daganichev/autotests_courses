@@ -7,6 +7,12 @@
 
 
 def repeats(our_str):
+    """
+    Функция создает словарь из всех возможных символов строки, после чего пересчитываем их в цикле
+    и формируем строку на выход.
+    :param our_str: получаем входящую строку
+    :return: возвращаем строку
+    """
     new_str = ''
     letters_dict = dict.fromkeys([i for i in our_str], 0)
     for i in our_str:
