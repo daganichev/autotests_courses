@@ -30,13 +30,8 @@ def everything_for_your_cat(cats_data):
     for i in cats_data:
         people = ''
         iterator_1 = 0
-        # В следующем цикле происходит формирование переменной people, чтобы сформировать ключ для словаря
-        for j in i:
-            if iterator_1 == 2:
-                people += str(j) + ' '
-            if iterator_1 == 3:
-                people += str(j)
-            iterator_1 += 1
+        # В следующей строке происходит формирование переменной people, чтобы сформировать ключ для словаря
+        people += f'{i[-2]} {i[-1]}'
         # В следующем условии проверяем есть ли уже данный человек в словаре
         # если нет происходит добавление человека в словарь[key], после чего добавление питомца в словарь[value]
         if people not in people_and_cats_dict:
