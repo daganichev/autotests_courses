@@ -23,6 +23,7 @@ def global_changes():
 
 global_changes()
 
+
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 assert number == 5, 'Переменная number должна иметь значение 5'
 assert string == 'Hello, dear friend', 'Переменная number должна иметь значение Home, sweet home'
