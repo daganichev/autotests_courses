@@ -10,12 +10,15 @@
 # Здесь пишем код
 
 def segment(dot_coordinate_1, dot_coordinate_2):
+    """
+    Функция получает координаты точек, проверяет возможно ли сложить входящие данные,
+    если данные не проходят проверку, возвращает текст ошибки задом-наперед
+    :rtype: object
+    """
     a_x, a_y = dot_coordinate_1
     b_x, b_y = dot_coordinate_2
 
     try:
-        if not isinstance(a_x, int) or not isinstance(a_y, int) or not isinstance(b_x, int) or not isinstance(b_y, int):
-            print('Одна из точек не целое число')
         return a_x + a_y + b_y + b_x
     except Exception as ex:
         error = ex.args[0]

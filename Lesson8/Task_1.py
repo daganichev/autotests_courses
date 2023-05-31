@@ -19,6 +19,13 @@ import unittest  # Не удалять
 # Здесь пишем код
 
 def treatment_sum(our_turple: tuple):
+    """
+    Функция принимает входящий кортеж, если данные можно сложить, складываем и возвращаем, если нет возвращаем
+    строку сработанного исключения, если данных в кортеже много вызываем исключение много данных
+    :param our_turple: входящий кортеж
+    :return: our_turple[0] + our_turple[1]: сумма числе
+    :return: сообщение сработанного исключения
+    """
     try:
         if len(our_turple) > 2:
             raise Exception('Много данных')
@@ -27,7 +34,6 @@ def treatment_sum(our_turple: tuple):
         return 'Нельзя сложить эти данные'
     except IndexError:
         return 'Недостаточно данных'
-    #return our_turple[0] + our_turple[1]
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 

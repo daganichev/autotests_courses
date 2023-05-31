@@ -17,6 +17,13 @@ import unittest  # Не удалять
 
 class Trigon:
     def __init__(self, *args):
+        """
+        Функция инициализирует входящие длины отрезков, получаем на вход любое кол-во аргументов,
+        по условиям проверяет: кол-во входящих аргументов, являются аргументы целым числом,
+        являются ли аргументы положительными, может ли существовать треугольник с данными
+        длинами отрезков, если что-то не соответствует условиям, срабатывает вызов исключения.
+        :rtype: object
+        """
         if len(args) != 3:
             raise IndexError(f'Передано {len(args)} аргументов, а ожидается 3')
         if not isinstance(args[0], int) or not isinstance(args[1], int) or not isinstance(args[2], int):
@@ -25,7 +32,7 @@ class Trigon:
             raise ValueError('Стороны должны быть положительными')
         if args[0] + args[1] <= args[2] or args[1] + args[2] <= args[0] or args[0] + args[2] <= args[1]:
             raise Exception("Не треугольник")
-        self.sides = args
+        self.a, self.b, self.c = args
 # Здесь пишем код
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
