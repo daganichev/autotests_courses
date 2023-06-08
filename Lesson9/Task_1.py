@@ -23,7 +23,6 @@ def delete_numbers():
                     line_in_first_file = line_in_first_file + j
             second_file.write(line_in_first_file)
             line_in_first_file = ''
-        first_file.close()
 
 
 delete_numbers()
