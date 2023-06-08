@@ -49,8 +49,8 @@ def func_log(file_log='log.txt'):
             name_func = func.__name__
             date_time_func = datetime.datetime.now().strftime("%d.%m %H:%M:%S")
             with open(Path(Path.cwd(), 'test_file', f'{file_log}'), 'a', encoding='utf-8') as file_for_log:
-                file_for_log.write(f'{name_func} вызвана {date_time_func}\n')
                 func()
+                file_for_log.write(f'{name_func} вызвана {date_time_func}\n')
         return wrapper
     return time_log
 

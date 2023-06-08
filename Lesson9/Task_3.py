@@ -12,20 +12,20 @@ def calculate_summ_purchases():
     список, после сортирует и суммирует 3 самых больших числа
     :return: целое число, сумма трёх самых дорогих покупок
     """
-    prices_file = open(Path(Path.cwd(), 'test_file', 'task_3.txt'))
+
     summ_list = []
 
-    prices_list = prices_file.readlines()
+    with open(Path(Path.cwd(), 'test_file', 'task_3.txt'), 'r', encoding='utf-8') as file:
 
-    summ = 0
-    for price in prices_list:
-        if price == '\n':
-            summ_list.append(summ)
-            summ = 0
-        else:
-            summ += int(price[:-1])
+        prices_list = file.readlines()
 
-    prices_file.close()
+        summ = 0
+        for price in prices_list:
+            if price == '\n':
+                summ_list.append(summ)
+                summ = 0
+            else:
+                summ += int(price[:-1])
 
     summ_list.sort()
     summ_purchases = sum(summ_list[-3:])
