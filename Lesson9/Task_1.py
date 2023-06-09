@@ -10,20 +10,18 @@ def delete_numbers():
     """
     Функция берет построчно текст из одного файла, и переносит его в другой, пропуская цифры
     """
-    first_file = open(Path(Path.cwd(), 'test_file', 'task1_data.txt'), encoding='utf-8')
-    file_line_list = first_file.readlines()
-    with open(Path(Path.cwd(), 'test_file', 'task1_answer.txt'), 'w', encoding='utf-8') as second_file:
-        line_in_first_file = ''
-
-        for i in file_line_list:
-            for j in i:
-                if j.isdigit():
-                    pass
-                else:
-                    line_in_first_file = line_in_first_file + j
-            second_file.write(line_in_first_file)
+    with open(Path(Path.cwd(), 'test_file', 'task1_data.txt'), encoding='utf-8') as first_file:
+        file_line_list = first_file.readlines()
+        with open(Path(Path.cwd(), 'test_file', 'task1_answer.txt'), 'w', encoding='utf-8') as second_file:
             line_in_first_file = ''
-    first_file.close()
+
+            for i in file_line_list:
+                for j in i:
+                    if j.isdigit():
+                        pass
+                    else:
+                        line_in_first_file = line_in_first_file + j
+                second_file.write(line_in_first_file)
 
 
 delete_numbers()
