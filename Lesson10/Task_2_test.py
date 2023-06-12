@@ -31,7 +31,7 @@ def test_negative_1():
     try:
         all_division(99, 0)
     except ZeroDivisionError:
-        print(' Переданы неверные параметры', end='')
+        print(' Нельзя делить на ноль', end='')
 
 
 def test_positive_3():
@@ -41,6 +41,6 @@ def test_negative_2():
     try:
         all_division('a', 'b')
     except TypeError:
-        print(' Переданы неверные параметры', end='')
+        print(' Нельзя делить строковые переменные', end='')
 
 
