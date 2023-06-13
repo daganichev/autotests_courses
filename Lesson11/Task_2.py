@@ -5,6 +5,7 @@
 # Удалить это сообщение и убедиться, что удалили
 # Для сдачи задания пришлите код и запись с экрана прохождения теста
 
+import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
@@ -76,7 +77,7 @@ try:
     try:
         message = driver.find_element(By.CSS_SELECTOR, '.msg-dialogs-item p')
         assert message.text != message_string, 'Не удалось удалить сообщение'
-    except:
+    except selenium.common.exceptions.NoSuchElementException:
         print('Сообщения в реестре отсутствуют')
 finally:
     driver.quit()
