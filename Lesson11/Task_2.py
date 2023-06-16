@@ -30,8 +30,12 @@ try:
     assert line_login.get_attribute('value') == login, 'Логин не соответствует эталонному'
 
     line_password = driver.find_element(By.CSS_SELECTOR, '[name="Password"]')
-    line_password.send_keys(password, Keys.ENTER)
+    line_password.send_keys(password)
     assert line_password.get_attribute('value') == password, 'Пароль не соответствует эталонному'
+    sleep(1)
+
+    auth_button = driver.find_element(By.CSS_SELECTOR, '.auth-AdaptiveLoginForm__loginButtonImage')
+    auth_button.click()
     sleep(5)
 
     contacts = driver.find_element(By.CSS_SELECTOR, '[name="item-contacts"]')

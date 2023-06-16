@@ -26,8 +26,7 @@ try:
     contacts_tab.click()
     sleep(3)
 
-    tensor_banner = browser.find_element(By.CSS_SELECTOR, '#contacts_clients .sbisru-Contacts__logo-tensor'
-                                                          '[href="https://tensor.ru/"]')
+    tensor_banner = browser.find_element(By.CSS_SELECTOR, '#contacts_clients .sbisru-Contacts__logo-tensor')
     assert tensor_banner.is_displayed(), 'Баннер Тензор не отображается'
     tensor_banner.click()
     sleep(3)
